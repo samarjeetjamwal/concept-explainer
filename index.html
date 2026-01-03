@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concept Explainer Tool</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Concept Explainer Tool</h1>
+            <p>Get clear explanations of any topic at your preferred difficulty level</p>
+        </header>
+
+        <main>
+            <form id="explanationForm">
+                <div class="input-group">
+                    <label for="topicInput">Enter a concept or topic:</label>
+                    <input 
+                        type="text" 
+                        id="topicInput" 
+                        name="topic" 
+                        placeholder="e.g., Quantum Computing, Photosynthesis, Blockchain"
+                        required
+                        aria-describedby="topicHelp"
+                    >
+                    <div id="topicHelp" class="help-text">Be specific for better results (e.g., "How do neural networks work?" instead of "AI")</div>
+                </div>
+
+                <div class="input-group">
+                    <label>Difficulty Level:</label>
+                    <div class="difficulty-options">
+                        <label class="difficulty-option">
+                            <input type="radio" name="difficulty" value="beginner" checked>
+                            <span>Beginner</span>
+                        </label>
+                        <label class="difficulty-option">
+                            <input type="radio" name="difficulty" value="intermediate">
+                            <span>Intermediate</span>
+                        </label>
+                        <label class="difficulty-option">
+                            <input type="radio" name="difficulty" value="advanced">
+                            <span>Advanced</span>
+                        </label>
+                    </div>
+                </div>
+
+                <button type="submit" id="explainButton">Explain</button>
+            </form>
+
+            <div id="explanationResult" class="explanation-result" aria-live="polite">
+                <!-- Explanation will appear here -->
+            </div>
+        </main>
+
+        <footer>
+            <p>Concept Explainer Tool &copy; 2026</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
